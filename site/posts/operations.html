@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>日常运维命令</title>
+    <link rel="stylesheet" href="/assets/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/">YC4free</a>
+      <nav>
+        <a href="/">首页</a>
+        <a href="/blog.html">博客</a>
+      </nav>
+    </header>
+
+    <main class="article">
+      <a class="back" href="/blog.html">返回博客</a>
+      <time datetime="2026-06-02">2026-06-02</time>
+      <h1>日常运维命令</h1>
+      <p>YC4free 把常用操作放在 <code>scripts/</code> 目录中，避免每次手动输入复杂命令。</p>
+      <pre><code>./scripts/status.sh
+./scripts/logs.sh
+./scripts/restart.sh
+./scripts/show-client.sh
+./scripts/uninstall.sh</code></pre>
+      <p>卸载脚本只会停止容器，不会删除 <code>.env</code> 和 <code>runtime/</code> 中的本地配置，避免误删服务密钥。</p>
+    </main>
+  </body>
+</html>

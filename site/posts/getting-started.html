@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YC4free 快速开始</title>
+    <link rel="stylesheet" href="/assets/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/">YC4free</a>
+      <nav>
+        <a href="/">首页</a>
+        <a href="/blog.html">博客</a>
+      </nav>
+    </header>
+
+    <main class="article">
+      <a class="back" href="/blog.html">返回博客</a>
+      <time datetime="2026-06-02">2026-06-02</time>
+      <h1>YC4free 快速开始</h1>
+      <p>首次部署前，请确认服务器已经安装 Docker 和 Docker Compose 插件，并且安全组或防火墙允许访问 Xray 端口和博客端口。</p>
+      <p>运行安装脚本后，系统会生成服务端配置并启动容器。客户端分享链接保存在 <code>runtime/client.txt</code>，也会在安装完成时直接显示。</p>
+      <pre><code>chmod +x scripts/*.sh install.sh
+./install.sh</code></pre>
+      <p>如果使用域名，建议先把域名解析到服务器公网 IP，再把安装过程中的服务器地址填写为域名。</p>
+    </main>
+  </body>
+</html>

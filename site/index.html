@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YC4free - 数据、应用与博客</title>
+    <meta name="description" content="YC4free 提供 Docker 镜像部署、Xray VLESS Reality 自动配置、数据面板、应用入口和博客内容。">
+    <link rel="stylesheet" href="/assets/styles.css">
+  </head>
+  <body>
+    <header class="topbar appbar">
+      <a class="brand brand--with-mark" href="/" aria-label="YC4free 首页">
+        <span class="brand-mark">Y</span>
+        <span>YC4free</span>
+      </a>
+
+      <nav class="tabnav" aria-label="主页菜单">
+        <a class="is-active" href="#data">数据</a>
+        <a href="#apps">应用</a>
+        <a href="#blog">博客</a>
+      </nav>
+
+      <a class="github-link" href="https://github.com/your-name/YC4free">GitHub</a>
+    </header>
+
+    <main>
+      <section class="dashboard-hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Docker Image · Xray Reality · HTTP Blog</p>
+          <h1>一个镜像完成服务端、博客和客户端配置页</h1>
+          <p class="lead">YC4free 适合部署到 DcDeploy：容器启动后自动生成节点参数，普通访问显示博客，隐藏路径输入密码后显示客户端配置。</p>
+        </div>
+
+        <div class="metric-strip" aria-label="服务概览">
+          <div>
+            <span>运行模式</span>
+            <strong>单容器</strong>
+          </div>
+          <div>
+            <span>客户端协议</span>
+            <strong>VLESS Reality</strong>
+          </div>
+          <div>
+            <span>博客服务</span>
+            <strong>Node HTTP</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="data">
+        <div class="section__header">
+          <p class="eyebrow">Data</p>
+          <h2>部署数据</h2>
+        </div>
+        <div class="data-grid">
+          <article>
+            <span class="data-label">Xray 端口</span>
+            <strong>443</strong>
+            <p>用于 VLESS Reality TCP 连接，可通过 <code>XRAY_PORT</code> 调整。</p>
+          </article>
+          <article>
+            <span class="data-label">网站端口</span>
+            <strong>8080</strong>
+            <p>博客和隐藏客户端配置页共用 Node HTTP 服务。</p>
+          </article>
+          <article>
+            <span class="data-label">配置存储</span>
+            <strong>/data</strong>
+            <p>UUID、Reality key 和 shortId 持久化保存，重启不丢失。</p>
+          </article>
+          <article>
+            <span class="data-label">健康检查</span>
+            <strong>/ready</strong>
+            <p>平台可通过该地址判断容器是否已经准备完成。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="apps">
+        <div class="section__header">
+          <p class="eyebrow">Apps</p>
+          <h2>应用入口</h2>
+        </div>
+        <div class="app-grid">
+          <article>
+            <div class="app-icon">D</div>
+            <h3>DcDeploy 部署</h3>
+            <p>使用 GitHub 自动构建出的 GHCR 镜像，配置环境变量后即可启动。</p>
+          </article>
+          <article>
+            <div class="app-icon">C</div>
+            <h3>客户端配置</h3>
+            <p>访问 <code>CONFIG_PATH</code> 设置的隐藏路径，输入密码查看分享链接。</p>
+          </article>
+          <article>
+            <div class="app-icon">B</div>
+            <h3>博客内容</h3>
+            <p>首页和文章由容器内置 HTTP 服务直接提供，不需要 Nginx。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="blog">
+        <div class="section__header section__header--split">
+          <div>
+            <p class="eyebrow">Blog</p>
+            <h2>最新博客</h2>
+          </div>
+          <a class="button" href="/blog.html">全部文章</a>
+        </div>
+        <div class="post-list">
+          <a class="post-card" href="/posts/getting-started.html">
+            <time datetime="2026-06-02">2026-06-02</time>
+            <h3>YC4free 快速开始</h3>
+            <p>从镜像部署、端口暴露到客户端导入，整理首次上线需要关注的事项。</p>
+          </a>
+          <a class="post-card" href="/posts/operations.html">
+            <time datetime="2026-06-02">2026-06-02</time>
+            <h3>日常运维命令</h3>
+            <p>了解状态检查、服务重启、客户端配置查看和持久化目录。</p>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>YC4free</span>
+      <span>HTTP blog service</span>
+    </footer>
+  </body>
+</html>
