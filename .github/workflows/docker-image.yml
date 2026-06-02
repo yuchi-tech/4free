@@ -34,7 +34,6 @@ jobs:
           push: true
           tags: |
             ghcr.io/${{ github.repository_owner }}/4free:latest
-            ghcr.io/${{ github.repository_owner }}/4free:${{ github.sha }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
